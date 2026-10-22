@@ -24,6 +24,7 @@ header p{margin:0;max-width:560px;color:#DCE8DF;font-size:20px}
 .leaf{position:absolute;right:-40px;top:-30px;width:340px;opacity:.13}
 .thanks{display:none;background:var(--card);border:2px solid var(--zest);border-radius:20px;margin:-28px auto 0;position:relative;z-index:2;padding:24px;box-shadow:0 10px 30px rgba(31,77,58,.12)}
 .thanks.on{display:grid;grid-template-columns:150px 1fr;gap:24px;align-items:center}
+.thanks.on.nocover{grid-template-columns:1fr}
 .thanks img{width:150px;border-radius:6px;box-shadow:0 6px 16px rgba(0,0,0,.18)}
 .thanks h2{font:700 26px/1.2 Fraunces,Georgia,serif;margin:0 0 8px}
 .thanks p{margin:0 0 16px;color:var(--muted)}
@@ -121,14 +122,15 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;
     var html;
     if (b && b.asin){
       var h = has(b, host) ? host : other;
-      html = (b.cover ? '<img src="' + esc(b.cover) + '" alt="Cover of ' + esc(b.title) + '">' : "<div></div>") +
+      html = (b.cover ? '<img src="' + esc(b.cover) + '" alt="Cover of ' + esc(b.title) + '">' : (t.classList.add("nocover"), "")) +
         '<div><h2>Thank you for choosing ' + esc(b.title) + '!</h2>' +
         '<p>Did you enjoy it? A short review on Amazon helps other readers find it, and it means the world to a small creator.</p>' +
         '<div class="btns"><a class="btn main" href="' + review(b, h) + '" target="_blank" rel="noopener">Write a review</a>' +
         (b.us && b.de ? '<a class="btn alt" href="' + review(b, h === host ? other : host) + '" target="_blank" rel="noopener">' + (h === "www.amazon.de" ? "Amazon.com" : "Amazon.de") + '</a>' : "") +
         '</div></div>';
     } else {
-      html = '<div></div><div><h2>Thank you for choosing a Zestfern book!</h2>' +
+      t.classList.add("nocover");
+      html = '<div><h2>Thank you for choosing a Zestfern book!</h2>' +
         '<p>Did you enjoy it? A short review on Amazon helps other readers find it.</p>' +
         '<div class="btns"><a class="btn main" href="https://' + host + '/s?k=Zestfern&i=stripbooks" target="_blank" rel="noopener">Find it on Amazon</a></div></div>';
     }
