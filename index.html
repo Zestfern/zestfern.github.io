@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zestfern Books</title>
+<meta name="description" content="Large print puzzle books, coloring books and journals by Zestfern.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FBF8EF;--card:#FFFFFF;--ink:#1D2B24;--muted:#5B6B62;--fern:#1F4D3A;--zest:#C6E048;--orange:#F29E38;--line:#E6E0CF}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 19px/1.55 "Atkinson Hyperlegible",system-ui,sans-serif}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{background:var(--fern);color:#fff;position:relative;overflow:hidden}
+header .wrap{padding-top:44px;padding-bottom:48px;position:relative;z-index:1}
+.logo{display:flex;align-items:center;gap:12px;font:700 30px/1 Fraunces,Georgia,serif;letter-spacing:.3px}
+.logo svg{width:42px;height:42px}
+header h1{font:700 clamp(30px,5vw,48px)/1.1 Fraunces,Georgia,serif;margin:28px 0 12px;max-width:640px}
+header p{margin:0;max-width:560px;color:#DCE8DF;font-size:20px}
+.leaf{position:absolute;right:-40px;top:-30px;width:340px;opacity:.13}
+.thanks{display:none;background:var(--card);border:2px solid var(--zest);border-radius:20px;margin:-28px auto 0;position:relative;z-index:2;padding:24px;box-shadow:0 10px 30px rgba(31,77,58,.12)}
+.thanks.on{display:grid;grid-template-columns:150px 1fr;gap:24px;align-items:center}
+.thanks img{width:150px;border-radius:6px;box-shadow:0 6px 16px rgba(0,0,0,.18)}
+.thanks h2{font:700 26px/1.2 Fraunces,Georgia,serif;margin:0 0 8px}
+.thanks p{margin:0 0 16px;color:var(--muted)}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 20px;border-radius:999px;font-weight:700;text-decoration:none;font-size:18px;border:2px solid var(--fern)}
+.btn.main{background:var(--fern);color:#fff}
+.btn.alt{background:#fff;color:var(--fern)}
+.btn:focus-visible,.chip:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+.bar{display:flex;flex-wrap:wrap;gap:10px;margin:36px 0 22px;align-items:center}
+.bar h2{font:700 28px/1.2 Fraunces,Georgia,serif;margin:0 auto 0 0}
+.chip{border:2px solid var(--line);background:#fff;border-radius:999px;padding:9px 16px;font:700 17px "Atkinson Hyperlegible",sans-serif;color:var(--ink);cursor:pointer}
+.chip[aria-pressed=true]{background:var(--fern);border-color:var(--fern);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:26px;margin-bottom:56px}
+.book{background:var(--card);border-radius:16px;padding:14px;border:1px solid var(--line);display:flex;flex-direction:column;transition:transform .15s}
+.book:hover{transform:translateY(-3px)}
+.book .cv{aspect-ratio:17/22;border-radius:6px;overflow:hidden;background:#EEE9DA;box-shadow:0 4px 12px rgba(0,0,0,.14)}
+.book img{width:100%;height:100%;object-fit:cover;display:block}
+.book h3{font-size:19px;line-height:1.3;margin:14px 0 4px}
+.book .sub{color:var(--muted);font-size:16px;margin:0 0 12px;flex:1}
+.book .tag{align-self:flex-start;background:#F1F6DA;color:var(--fern);font-size:14px;font-weight:700;border-radius:6px;padding:2px 8px;margin-bottom:8px}
+.book .btns .btn{padding:9px 14px;font-size:16px}
+.empty{grid-column:1/-1;text-align:center;padding:60px 20px;background:#fff;border:2px dashed var(--line);border-radius:20px;color:var(--muted)}
+.empty b{display:block;font:700 26px Fraunces,Georgia,serif;color:var(--ink);margin-bottom:8px}
+footer{background:#fff;border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:16px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+@media(max-width:600px){.thanks.on{grid-template-columns:1fr;text-align:center}.thanks img{margin:0 auto}.thanks .btns{justify-content:center}.bar h2{width:100%}}
+</style>
+</head>
+<body>
+<header>
+  <svg class="leaf" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 64C32 36 18 18 2 6c16 3 30 16 30 34 0-18 14-31 30-34C46 18 32 36 32 64z" fill="#C6E048"/></svg>
+  <div class="wrap">
+    <div class="logo"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 58C32 36 21 22 8 13c11 2 24 11 24 27 0-16 13-25 24-27C43 22 32 36 32 58z" fill="#C6E048"/></svg>Zestfern</div>
+    <h1>Books that make quiet time a little brighter</h1>
+    <p>Large print puzzles, relaxing coloring pages and handy journals, made with care.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="thanks" id="thanks" aria-live="polite"></section>
+  <div class="bar" role="toolbar" aria-label="Filter books">
+    <h2>The bookshelf</h2>
+    <button class="chip" data-f="all" aria-pressed="true">All</button>
+    <button class="chip" data-f="puzzles" aria-pressed="false">Puzzles</button>
+    <button class="chip" data-f="coloring" aria-pressed="false">Coloring</button>
+    <button class="chip" data-f="journals" aria-pressed="false">Journals</button>
+    <button class="chip" data-f="kids" aria-pressed="false">For kids</button>
+  </div>
+  <div class="grid" id="grid"></div>
+</main>
+
+<footer><div class="wrap">
+  <span>© Zestfern · Books available on Amazon</span>
+  <a class="btn alt" href="https://www.pinterest.com/zestfern/" target="_blank" rel="noopener">Follow on Pinterest</a>
+</div></footer>
+
+<script>
+(function(){
+  var DE = /^de/i.test(navigator.language || "");
+  var host = DE ? "www.amazon.de" : "www.amazon.com";
+  var other = DE ? "www.amazon.com" : "www.amazon.de";
+  var LABEL = {puzzles:"Puzzles",coloring:"Coloring",journals:"Journals",kids:"For kids"};
+  var params = new URLSearchParams(location.search);
+  var bid = params.get("b");
+  var books = [], filter = "all";
+
+  function esc(s){return String(s == null ? "" : s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
+  function shop(b, h){return "https://" + h + "/dp/" + encodeURIComponent(b.asin);}
+  function review(b, h){return "https://" + h + "/review/create-review?asin=" + encodeURIComponent(b.asin);}
+  function has(b, h){return h === "www.amazon.de" ? !!b.de : !!b.us;}
+
+  function card(b){
+    var h = has(b, host) ? host : other;
+    var btn = b.asin ? '<a class="btn main" href="' + shop(b, h) + '" target="_blank" rel="noopener">View on Amazon</a>' : "";
+    return '<article class="book"><div class="cv">' + (b.cover ? '<img loading="lazy" src="' + esc(b.cover) + '" alt="Cover of ' + esc(b.title) + '">' : "") + '</div>' +
+      '<h3>' + esc(b.title) + '</h3><span class="tag">' + esc(LABEL[b.cat] || "Book") + '</span><p class="sub">' + esc(b.subtitle) + '</p>' +
+      '<div class="btns">' + btn + '</div></article>';
+  }
+
+  function render(){
+    var g = document.getElementById("grid");
+    var list = books.filter(function(b){return filter === "all" || b.cat === filter;});
+    if (!list.length){
+      g.innerHTML = '<div class="empty"><b>' + (books.length ? "Nothing here yet" : "New books are on the way") + '</b>' +
+        (books.length ? "Try another category." : "The first Zestfern books are being printed right now. Follow us on Pinterest to see them first.") + '</div>';
+      return;
+    }
+    g.innerHTML = list.map(card).join("");
+  }
+
+  function thanks(){
+    if (!bid) return;
+    var t = document.getElementById("thanks");
+    var b = books.filter(function(x){return x.id === bid;})[0];
+    var html;
+    if (b && b.asin){
+      var h = has(b, host) ? host : other;
+      html = (b.cover ? '<img src="' + esc(b.cover) + '" alt="Cover of ' + esc(b.title) + '">' : "<div></div>") +
+        '<div><h2>Thank you for choosing ' + esc(b.title) + '!</h2>' +
+        '<p>Did you enjoy it? A short review on Amazon helps other readers find it, and it means the world to a small creator.</p>' +
+        '<div class="btns"><a class="btn main" href="' + review(b, h) + '" target="_blank" rel="noopener">Write a review</a>' +
+        (b.us && b.de ? '<a class="btn alt" href="' + review(b, h === host ? other : host) + '" target="_blank" rel="noopener">' + (h === "www.amazon.de" ? "Amazon.com" : "Amazon.de") + '</a>' : "") +
+        '</div></div>';
+    } else {
+      html = '<div></div><div><h2>Thank you for choosing a Zestfern book!</h2>' +
+        '<p>Did you enjoy it? A short review on Amazon helps other readers find it.</p>' +
+        '<div class="btns"><a class="btn main" href="https://' + host + '/s?k=Zestfern&i=stripbooks" target="_blank" rel="noopener">Find it on Amazon</a></div></div>';
+    }
+    t.innerHTML = html;
+    t.classList.add("on");
+  }
+
+  document.querySelectorAll(".chip").forEach(function(c){
+    c.addEventListener("click", function(){
+      filter = c.getAttribute("data-f");
+      document.querySelectorAll(".chip").forEach(function(x){x.setAttribute("aria-pressed", x === c ? "true" : "false");});
+      render();
+    });
+  });
+
+  fetch("books.json", {cache: "no-store"}).then(function(r){return r.json();}).then(function(d){
+    books = (d && d.books) || [];
+  }).catch(function(){}).then(function(){ thanks(); render(); });
+})();
+</script>
+</body>
+</html>
