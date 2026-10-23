@@ -48,8 +48,19 @@ header p{margin:0;max-width:560px;color:#DCE8DF;font-size:20px}
 .book .btns .btn{padding:9px 14px;font-size:16px}
 .empty{grid-column:1/-1;text-align:center;padding:60px 20px;background:#fff;border:2px dashed var(--line);border-radius:20px;color:var(--muted)}
 .empty b{display:block;font:700 26px Fraunces,Georgia,serif;color:var(--ink);margin-bottom:8px}
+.sister{display:grid;grid-template-columns:96px 1fr auto;gap:24px;align-items:center;background:var(--fern);color:#fff;border-radius:20px;padding:28px 30px;margin:0 0 56px;position:relative;overflow:hidden}
+.sister .ico{width:96px;height:96px;border-radius:50%;background:rgba(198,224,72,.16);display:grid;place-items:center}
+.sister .ico svg{width:56px;height:56px}
+.sister .kick{font-size:14px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--zest);margin:0 0 4px}
+.sister h2{font:700 26px/1.2 Fraunces,Georgia,serif;margin:0 0 6px}
+.sister p{margin:0;color:#DCE8DF}
+.sister .btn{background:var(--zest);border-color:var(--zest);color:var(--fern);white-space:nowrap}
+.sister .btn:hover{background:#fff;border-color:#fff}
+footer .links{display:flex;flex-wrap:wrap;gap:18px;align-items:center}
+footer .links a.txt{font-weight:700;color:var(--fern);text-decoration:underline;text-underline-offset:3px}
 footer{background:#fff;border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:16px}
 footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+@media(max-width:760px){.sister{grid-template-columns:1fr;text-align:center;justify-items:center;padding:26px 20px}}
 @media(max-width:600px){.thanks.on{grid-template-columns:1fr;text-align:center}.thanks img{margin:0 auto}.thanks .btns{justify-content:center}.bar h2{width:100%}}
 </style>
 </head>
@@ -74,11 +85,24 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;
     <button class="chip" data-f="kids" aria-pressed="false">For kids</button>
   </div>
   <div class="grid" id="grid"></div>
+
+  <section class="sister" aria-labelledby="sister-h">
+    <div class="ico" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M22 8l-14 8 5 12 6-3v31h26V25l6 3 5-12-14-8c-2 5-6 8-10 8s-8-3-10-8z" fill="none" stroke="#C6E048" stroke-width="3.5" stroke-linejoin="round"/><path d="M32 52c0-9-4-14-9-17 5 0 9 4 9 10 0-6 4-10 9-10-5 3-9 8-9 17z" fill="#C6E048"/></svg></div>
+    <div>
+      <p class="kick">Our sister shop</p>
+      <h2 id="sister-h">Snarkfern</h2>
+      <p>Funny shirts for people with hobbies – witty t-shirts and hoodies from the same little studio.</p>
+    </div>
+    <a class="btn" href="https://snarkfern.github.io" target="_blank" rel="noopener">Visit Snarkfern Shop</a>
+  </section>
 </main>
 
 <footer><div class="wrap">
   <span>© Zestfern · Books available on Amazon</span>
-  <a class="btn alt" href="https://www.pinterest.com/zestfern/" target="_blank" rel="noopener">Follow on Pinterest</a>
+  <span class="links">
+    <a class="txt" href="https://snarkfern.github.io" target="_blank" rel="noopener">Sister shop: Snarkfern</a>
+    <a class="btn alt" href="https://www.pinterest.com/zestfern/" target="_blank" rel="noopener">Follow on Pinterest</a>
+  </span>
 </div></footer>
 
 <script>
